@@ -274,5 +274,16 @@
   <!-- Embed scripts -->
   <script async src="//www.instagram.com/embed.js"></script>
   <script async src="https://www.tiktok.com/embed.js"></script>
+  <script>
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      const iframes = document.querySelectorAll('iframe[src*="instagram.com"]');
+      iframes.forEach(iframe => {
+        iframe.style.width = "100%";
+        iframe.style.maxWidth = "100%";
+      });
+    }, 2000); // delay biar embed instagram selesai diproses
+  });
+</script>
 </body>
 </html>
